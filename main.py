@@ -4,6 +4,7 @@ import numpy as np
 from collections import Counter
 import string
 import re
+import math
 
 # Loading the file
 with open("DevilsDictionary.txt", "r") as file:
@@ -32,5 +33,11 @@ with open("DevilsDictionary.txt", "r") as file:
 
     print (letters_freq)
 
-
     # Calculating entropy
+    entropy = 0
+    for k,v in letters_freq.items():
+        entropy += v*math.log(v, 2)
+
+    entropy *= (-1)
+
+    print(entropy)
