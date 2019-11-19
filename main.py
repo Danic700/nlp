@@ -20,11 +20,17 @@ with open("DevilsDictionary.txt", "r") as file:
     # Finding letter frequency
     alphabet = list(string.ascii_lowercase)+[' ']
 
-    letters_freq = Counter(book)
+    letters_counter = Counter(book)
 
-    print(letters_freq)
+    print(letters_counter)
     
     total_chars = len(book)
 
+    letters_freq = {}
+    for k,v in letters_counter.items():
+        letters_freq[k] = v*1.0 / total_chars
 
-# Calculating entropy
+    print (letters_freq)
+
+
+    # Calculating entropy
