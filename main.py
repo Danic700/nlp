@@ -52,8 +52,15 @@ with open("DevilsDictionary.txt", "r") as file:
         two_letters_counter[(first_letter, second_letter)] += 1
 
     # Number of tokens
+    tokens = [w for w in book.split(' ') if w]
+
+    print(len(tokens))
 
     # Number of different word (word types)
+    diff_words = set(tokens)
+
+    print(len(diff_words))
 
     # Word frequency
+    word_freq = Counter(tokens)
 
