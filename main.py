@@ -31,7 +31,7 @@ with open("DevilsDictionary.txt", "r") as file:
     for k,v in letters_counter.items():
         letters_freq[k] = v*1.0 / total_chars
 
-    print (letters_freq)
+    print(letters_freq)
 
     # Calculating entropy
     entropy = 0
@@ -41,3 +41,19 @@ with open("DevilsDictionary.txt", "r") as file:
     entropy *= (-1)
 
     print(entropy)
+
+    # Calculating 2 letters sequnces
+    two_letters_counter = Counter()
+
+    for i in xrange(len(book)-1):
+        first_letter = book[i]
+        second_letter = book[i+1]
+
+        two_letters_counter[(first_letter, second_letter)] += 1
+
+    # Number of tokens
+
+    # Number of different word (word types)
+
+    # Word frequency
+
