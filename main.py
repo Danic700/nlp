@@ -2,27 +2,20 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import numpy as np
 from collections import Counter
+from scipy._lib.six import xrange
+from scipy.stats import entropy
 import string
 import re
 import math
 
 # Loading the file
-from scipy._lib.six import xrange
-
-
-def calculate_entropy(letters):
-    entropy = 0
-    for k, v in letters.items():
-        entropy += v * math.log(v, 2)
-    entropy *= (-1)
-    return entropy
 
 
 with open("DevilsDictionary.txt", "r") as file:
     book = file.read().lower()
 
     # Remove everything except a-z and space
-    book = re.sub('[^a-z ]+', '', book)
+    book = re.sub('[^a-z ]+', ' ', book)
 
     # Cleaning the text from stopwords (but keep the spaces)
     stop_words = set(stopwords.words('english'))
@@ -30,14 +23,9 @@ with open("DevilsDictionary.txt", "r") as file:
         book = book.replace(' ' + stopword + ' ', ' ')
 
     # (4a) Finding letter frequency
-    alphabet = list(string.ascii_lowercase) + [' ']
-
     letters_counter = Counter(book)
-
     print(letters_counter)
-
     total_chars = len(book)
-
     letters_freq = {}
     for k, v in letters_counter.items():
         letters_freq[k] = v * 1.0 / total_chars
@@ -45,8 +33,8 @@ with open("DevilsDictionary.txt", "r") as file:
     print(letters_freq)
 
     # Calculating entropy
-    entropy = calculate_entropy(letters_freq)
-    print(entropy)
+    entrop = entropy(list(letters_freq.values()), base=2)
+    print(entrop)
 
     # (4b) Calculating 2 letters sequnces
     two_letters_counter = Counter()
@@ -60,18 +48,18 @@ with open("DevilsDictionary.txt", "r") as file:
     for k, v in two_letters_counter:
         two_letters_counter[(k, v)] /= letters_counter[k]
 
-    entropy = calculate_entropy(two_letters_counter)
-    print(entropy)
+    entrop = entropy(list(two_letters_counter.values()), base=2)
+    print(entrop)
 
     # (5) Number of tokens
-    tokens = [w for w in book.split(' ') if w]
-
+    tokens = word_tokenize(book)
     print(len(tokens))
+    print(tokens)
 
     # Number of different word (word types)
     diff_words = set(tokens)
-
     print(len(diff_words))
 
     # Word frequency
     word_freq = Counter(tokens)
+    print(word_freq.most_common())
