@@ -7,20 +7,36 @@ from scipy.stats import entropy
 import string
 import re
 import math
+import os
 
-# Loading the file
+def clean_text(text):
+      text = re.sub('[^a-z ]+', ' ', text)
+
+      # Cleaning the text from stopwords (but keep the spaces)
+      stop_words = set(stopwords.words('english'))
+      for stopword in stop_words:
+            text = text.replace(' ' + stopword + ' ', ' ')
+
+      return text
+
+def read_text(dirname):
+      text = ''
+      for filename in os.listdir(dirname):
+            file = open(dirname+'/'+filename, "r")
+            text += file.read().lower()+'\n'
+
+      return text
+
+def read_dictionary():
+      return open('word_list_20k.txt', 'r').read()
 
 
-file = open("DevilsDictionary.txt", "r")
-book = file.read().lower()
+######################################## Train part ########################################
 
-# Remove everything except a-z and space
-book = re.sub('[^a-z ]+', ' ', book)
-
-# Cleaning the text from stopwords (but keep the spaces)
-stop_words = set(stopwords.words('english'))
-for stopword in stop_words:
-    book = book.replace(' ' + stopword + ' ', ' ')
+# Read all files to one text
+text = read_text('train')
+text = clean_text(text)
+dictionary = read_dictionary()
 
 # (4a) Finding letter frequency
 letters_counter = Counter(book)
