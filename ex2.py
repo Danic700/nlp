@@ -1,16 +1,21 @@
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-import numpy as np
-from collections import Counter
-from scipy._lib.six import xrange
-from scipy.stats import entropy
+from collections import Counter, defaultdict
 import string
 import re
 import math
 import os
 
-def clean_text(text):
-      text = re.sub('[^a-z ]+', ' ', text)
+######################################## Helper functions ########################################
+
+def get_words(text):
+      return text.split()
+
+def clean_text(text, removeDot):
+      r = '[^a-z ]+'
+      if removeDot:
+            '[^a-z \.]+'
+      # leave only english chars
+      text = re.sub(r, ' ', text)
 
       # Cleaning the text from stopwords (but keep the spaces)
       stop_words = set(stopwords.words('english'))
@@ -28,67 +33,109 @@ def read_text(dirname):
       return text
 
 def read_dictionary():
-      return open('word_list_20k.txt', 'r').read()
+      return open('word_list_20k.txt', 'r').read().split('\n')
 
 
-######################################## Train part ########################################
+######################################## Unigram model ########################################
 
-# Read all files to one text
+print("######################################## Unigram model ########################################")
+
+# Train
+print("Reading train texts")
 text = read_text('train')
-text = clean_text(text)
+print("Cleaning train texts")
+text = clean_text(text, True)
+print("Reading dictionary")
 dictionary = read_dictionary()
+counters = Counter()
+total_count = 0
+words = get_words(text)
+print("Counting words "+str(len(words)))
+for word in words:
+      total_count += 1
+      if word in dictionary:
+            counters[word] += 1
+      else:
+            counters['UNK'] += 1
+word_freq = {}
+print("Calculating word frequency")
+for word in counters.keys():
+      word_freq[word] = counters[word] / (total_count * 1.0)
 
-# (4a) Finding letter frequency
-letters_counter = Counter(book)
-total_chars = len(book)
-letters_freq = {}
-for k, v in letters_counter.items():
-    letters_freq[k] = v * 1.0 / total_chars
+# Test
+print("Reading test text")
+text = read_text('test')
+print("Cleaning test text")
+text = clean_text(text, False)
+total_words = 0
+sum = 0
+words = get_words(text)
+print("Counting words "+str(len(words)))
+for word in words:
+      total_words += 1
+      if word in word_freq.keys():
+            sum += -math.log(word_freq[word],2)
+print("Entropy="+str((sum / total_words)))
 
-# Calculating entropy
-entrop = entropy(list(letters_freq.values()), base=2)
-print("This is the entropy for the distribution of a letter in the text", entrop)
 
-# Calculating cross-entropy
-letter_distribution = []
-for i in range(0, 27):
-    letter_distribution.append(1 / 27)
+######################################## Bigram model ########################################
 
-cross_entropy = entropy(list(letters_freq.values()), letter_distribution, base=2) + entrop
-print("This is the cross entropy for the distribution for a letter in the text and a letter in general", cross_entropy)
+print("######################################## Bigram model ########################################")
 
-# (4b) Calculating 2 letters sequnces
-two_letters_counter = Counter()
+# Train
+print("Reading train texts")
+text = read_text('train')
+print("Cleaning train texts")
+text = clean_text(text, False)
+print("Reading dictionary")
+dictionary = read_dictionary()
+counters = Counter()
+total_count = 0
+sentences = text.split('.')
+print("Counting sentences "+str(len(sentences)))
+counts = Counter()
+context_counts = Counter()
+for sentence in sentences:
+      words = get_words(sentence)
+      for i in xrange(1, len(words)):
+            # bigram count and count context
+            counts[(words[i-1], words[i])] += 1
+            context_counts[(words[i-1])] += 1
 
-for i in xrange(len(book) - 1):
-    first_letter = book[i]
-    second_letter = book[i + 1]
-    two_letters_counter[(first_letter, second_letter)] += 1
+            # unigram count and count context
+            counts[(words[i])] += 1
+            context_counts[()] += 1
 
-for k, v in two_letters_counter:
-    two_letters_counter[(k, v)] /= letters_counter[k]
+print("Calculating probabilities")
+probabilities = defaultdict(lambda: 0)
+for ngram in counts.keys():
+      count = counts[ngram]
+      context = list(ngram)
+      context.pop()
+      context = tuple(context)
+      probability = (count * 1.0) / context_counts[context]
+      probabilities[ngram] = probability
 
-entrop = entropy(list(two_letters_counter.values()), base=2)
-print("This is the entropy for the distribution based on the prior letter appearance", entrop)
+# Test
+print("Reading test text")
+text = read_text('test')
+print("Cleaning test text")
+text = clean_text(text, False)
+sentences = text.split('.')
+# Linear interpulation
+lambda_1 = 0.2
+lambda_2 = 0.8
+H = 0
+W = 0
+print("Counting sentences "+str(len(sentences)))
+for sentence in sentences:
+      words = get_words(sentence)
+      for i in xrange(1, len(words)):
+            P1 = lambda_1 * probabilities[(words[i])]
+            P2 = lambda_2 * probabilities[(words[i-1],words[i])] + (1-lambda_2) * P1
+            H += -math.log(P2,2)
+            W += 1
 
-two_letter_distribution = []
-for i in range(0, 538):
-    two_letter_distribution.append(1 / 729)
+print("Entropy="+str((H / W)))
 
-cross_entropy = entropy(list(two_letters_counter.values()), two_letter_distribution, base=2) + entrop
-print("This is the cross entropy of the distribution based on the prior letter and two letters in general ",
-      cross_entropy)
-
-# (5) Number of tokens
-tokens = word_tokenize(book)
-print(len(tokens))
-print(tokens)
-
-# Number of different word (word types)
-diff_words = set(tokens)
-print(len(diff_words))
-
-# Word frequency
-word_freq = Counter(tokens)
-word_freq = Counter({k: v for k, v in word_freq.items() if len(k) > 1})  # Further Cleaning
-print(word_freq.most_common())
+            
