@@ -100,10 +100,10 @@ for sentence in sentences:
       for i in xrange(1, len(words)):
             # bigram count and count context
             counts[(words[i-1], words[i])] += 1
-            context_counts[(words[i-1])] += 1
+            context_counts[(words[i-1],)] += 1
 
             # unigram count and count context
-            counts[(words[i])] += 1
+            counts[(words[i],)] += 1
             context_counts[()] += 1
 
 print("Calculating probabilities")
@@ -131,9 +131,10 @@ print("Counting sentences "+str(len(sentences)))
 for sentence in sentences:
       words = get_words(sentence)
       for i in xrange(1, len(words)):
-            P1 = lambda_1 * probabilities[(words[i])]
+            P1 = lambda_1 * probabilities[(words[i],)]
             P2 = lambda_2 * probabilities[(words[i-1],words[i])] + (1-lambda_2) * P1
-            H += -math.log(P2,2)
+            if P2 != 0:
+                  H += -math.log(P2,2)
             W += 1
 
 print("Entropy="+str((H / W)))
