@@ -2,6 +2,7 @@
 
 from gensim.models import Word2Vec
 from collections import defaultdict
+from nltk import word_tokenize
 import pandas as pd
 
 
@@ -39,6 +40,22 @@ class MatrixExtractor:
 
                 vocabulary = word_freq.keys()
 
-                word_2_vec = self.vectorize_text(df, text_column)
+                # x = df[text_column].values().tolist()
+                # y = df['category'].values().tolist()
 
-                return (df, word_freq, word_2_vec, vocabulary)
+                x = list(df[text_column])
+                y = list(df['category'])
+
+                corpus = x + y
+
+                tok_corp = [word_tokenize(' '.join(sent)) for sent in corpus]
+
+                word_2_vec_model = Word2Vec(tok_corp, min_count=1, size = 32)
+
+                print('\n&&&&&&&&&&')
+                print('similarity')
+                print('&&&&&&&&&&')
+                print(word_2_vec_model.most_similar('hitting'))
+                # self.vectorize_text(df, text_column)
+
+                return (df, word_freq, word_2_vec_model, vocabulary)
