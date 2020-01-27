@@ -22,11 +22,3 @@ for w1_w2 in model:
 for  w1, w2 in model:
     if len(dict(model[w1, w2])) > 20:
         print(w1, w2, dict(model[w1, w2]))
-
-# print(dict(model['today', 'the']))
-# print(dict(model[None, 'KNIGHT']))
-# print(dict(model['the', '84']))
-# print(dict(model['with', 'possible']))
-
-
-#print(model.keys())
