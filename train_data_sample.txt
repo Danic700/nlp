@@ -1,0 +1,113 @@
+<subject>How to get rid of cigarette odor?</subject><maincat>Home</maincat>
+<subject>How to fix vertical blinds?</subject><content>I can no longer re-hang them because they are broken.</content><maincat>Home</maincat>
+<subject>How to clean window screens?</subject><maincat>Home</maincat>
+<subject>How to clean a bbq grill?</subject><maincat>Home</maincat>
+<subject>How to wash a cashmere?</subject><content>Hand wash or dry clean?</content><maincat>Home</maincat>
+<subject>How to unclog a tub?</subject><maincat>Home</maincat>
+<subject>How do you quiet a squeaky door?</subject><maincat>Home</maincat>
+<subject>How to fix a vacuum cleaner?</subject><content>My vacuum cleaner sucks!  It sucks dirt weakly.</content><maincat>Home</maincat>
+<subject>How to get rid of rodents?</subject><maincat>Home</maincat>
+<subject>How to decorate my dining table for Thanksgiving?</subject><maincat>Culture</maincat>
+<subject>How to select garden tools?</subject><maincat>Home</maincat>
+<subject>How to care for cacti?</subject><maincat>Home</maincat>
+<subject>How to grow peppers?</subject><maincat>Home</maincat>
+<subject>How to get rid of worms that get into broccoli and cauliflower?</subject><maincat>Home</maincat>
+<subject>How to make Brazilian rice?</subject><maincat>Foods</maincat>
+<subject>How to boil lobster?</subject><maincat>Foods</maincat>
+<subject>How to stir fry?</subject><content>Any tips?</content><maincat>Foods</maincat>
+<subject>How do I make fluffy scrambled eggs?</subject><maincat>Foods</maincat>
+<subject>How to make lumpia?</subject><maincat>Foods</maincat>
+<subject>How to make good sushi?</subject><maincat>Foods</maincat>
+<subject>How to make good spanish rice?</subject><maincat>Foods</maincat>
+<subject>How do you make iced coffee?</subject><maincat>Foods</maincat>
+<subject>How do you make iced tea?</subject><maincat>Foods</maincat>
+<subject>How do you make a marguerita?</subject><maincat>Foods</maincat>
+<subject>How do you make a mojito?</subject><maincat>Foods</maincat>
+<subject>How can I keep an unfinished bottle of wine from spoiling?</subject><maincat>Foods</maincat>
+<subject>How to pick cantaloupes?</subject><maincat>Foods</maincat>
+<subject>How do I ignore someone at work who likes me and wants to date me?</subject><maincat>Relationships</maincat>
+<subject>How can I make love last and my marriage stronger?</subject><maincat>Relationships</maincat>
+<subject>how do house chores get divided in your family?</subject><maincat>Relationships</maincat>
+<subject>How do you deal with a future mother-in-law who doesn't approve of you?</subject><maincat>Relationships</maincat>
+<subject>how do i know when to replace tires on my car?</subject><content>if there are no abnormal bumps or bruises. &#xd;&lt;br&gt;there seem to be some tread depth markers in the grooves on the tire, but what exactly do those mean?</content><maincat>Transportation</maincat>
+<subject>How do you classify music into genres?</subject><maincat>Entertainment</maincat>
+<subject>How did gift giving start on Christmas day?</subject><maincat>Culture</maincat>
+<subject>How did Winnie the Pooh get his name?</subject><maincat>Entertainment</maincat>
+<subject>How did Calvin and Hobbes meet?</subject><maincat>Entertainment</maincat>
+<subject>How do you feel about sex education for 4th and 5th graders? Is it too soon?</subject><maincat>Education</maincat>
+<subject>How can teachers, parents and administrators improve test scores for middle school children?</subject><maincat>Education</maincat>
+<subject>How do I convert metric to U.S units?</subject><maincat>Education</maincat>
+<subject>How can I find the state symbols for a state?</subject><maincat>Education</maincat>
+<subject>how can i watch soccer on tv in California?</subject><content>would love to be able to watch games from Europe...</content><maincat>Sports</maincat>
+<subject>How should I act on a date?</subject><content>Can someone give me tips?</content><maincat>Relationships</maincat>
+<subject>How do I roll my 401(k) over to a traditional IRA?</subject><content>I have a retirement plan with my former employer and I want to roll it over to a traditional IRA.  What are my other options?</content><maincat>Business</maincat>
+<subject>How do I protect myself from credit card scam?</subject><maincat>Business</maincat>
+<subject>How can i transfer the shows on my dvr to a dvd?</subject><maincat>Electronics</maincat>
+<subject>How do you bring up the salary subject during an interview if the interviewer didn't bring it up?</subject><maincat>Business</maincat>
+<subject>How do I tone my butt? What's the best exercise for butts?</subject><maincat>Health</maincat>
+<subject>How can I discipline my child without spanking?</subject><maincat>Parenting</maincat>
+<subject>How to get rid of stretch marks after pregnancy?</subject><maincat>Health</maincat>
+<subject>How to raise a lobster?</subject><content>What food does a lobster eat?</content><maincat>Pets</maincat>
+<subject>How do bowlers get reverse swing in cricket?</subject><maincat>Sports</maincat>
+<subject>How does China view North Korea's claimed nuclear weapons capability?</subject><content>North Korea has claimed the ability to build nuclear weapons, and has already demonstrated the ability to build rockets capable of reaching all of China's major population centers.  Is China concerned about having another nuclear-powered neighbor?  Western observers have questioned the reliability and sanity of the North Korean government.  How does China view the trustworthiness of North Korea?  Does China view North Korea as a potential threat to its security?</content><maincat>Other</maincat>
+<subject>How did John Lennon meet Yoko Ono?</subject><maincat>Entertainment</maincat>
+<subject>how can i win at tetris?</subject><maincat>Recreation</maincat>
+<subject>How do you set-up a personal video recorder without monthly fees?</subject><content>I figure why pay TiVo or a cable company or a satellite company to use a personal video recorder, after all, it's just a piece of timer software that records data to a hard drive. Just a matter of getting the tv listings, hooking up a home computer and finding the right software for one-time up front cost (something cheap, like $50 and not 300-500 like TiVo/ReplayTV charge you).</content><maincat>Entertainment</maincat>
+<subject>How do you make a puppy stop biting fingers/toes/any body part while playing?</subject><content>My shiba inu puppy is 14 weeks old, and she loooves to play.  For some reason, she likes to bite (not a hard bite) fingers / toes / arms / legs / my hair / clothes... pretty much anything.  &#xa;&#xa;I\'ve read a lot of ideas online like - say "no bite!" and stop playing with her (she\'ll just run after you and bite more), turn around and face the other way until she stops (this hurts too much!), give her a toy to play with instead (she will bite the toy and then go back to the fingers holding the toy), etc.&#xa;&#xa;Let me know if you have any other suggestions!</content><maincat>Pets</maincat>
+<subject>How do you feel about the show Cheaters?</subject><maincat>Relationships</maincat>
+<subject>How do you get onto the show Curb Appeal?</subject><content>Looks like this HGTV show is always in the Bay Area? How can we get our house onto this show?</content><maincat>Entertainment</maincat>
+<subject>How can I get my daughter to take the bottle?</subject><content>Silly question... we were so worried about getting her to breast feed (and that is going well) but now that she's 8 weeks and we're trying to introduce the bottle, she won't take it at all!  Any ideas/suggestions/tips?</content><maincat>Parenting</maincat>
+<subject>How can I get commercial prints of my digital photographs to look more like they look on screen?</subject><content>When I print digital photographs at Costco, they turn out much darker than the images I see on the screen. My work flow is:&#xa;&#xa;Canon SD300 -&gt; GraphicConverter (Mac) to sharpen, crop, set color profile -&gt; Costco printer</content><maincat>Electronics</maincat>
+<subject>How do you pronounce "Celebes Kalossi"?</subject><content>One of my favorite coffee varieties is Celebes Kalossi, but I\'ve never been sure how it\'s pronounced.&#xa;&#xa;I\'ve heard the first word pronounced both "suh-LEE-bus" or "SELL-a-bus".  Are either of those correct?&#xa;&#xa;And the second word I\'ve heard pronounced as "kuh-LOSS-ee" or "kuh-LOSS-aye".  Are one of those right?</content><maincat>Foods</maincat>
+<subject>How do you get a toddler to eat what's good for him?</subject><maincat>Parenting</maincat>
+<subject>How can I tell if the moon is waxing or waning?</subject><maincat>Science</maincat>
+<subject>How can you tell when a pear is ripe?</subject><maincat>Foods</maincat>
+<subject>How can I make a clean cut in something that is both metal and wood?</subject><content>Hi - I've got a door threshold to put in. It's a pre-fab thing that I got from Home Depot. It has interlocking wood and metal components, and I want to cut it to length. What tool would people recommend to make a clean cut that will require cutting through both metal and wood at once?</content><maincat>Home</maincat>
+<subject>How can you train your cat to walk on a leash?</subject><maincat>Pets</maincat>
+<subject>how can a man know that a woman is hinting him that it is safe to make the first move?</subject><maincat>Relationships</maincat>
+<subject>How do you encourage reading and spelling readiness?</subject><content>Do you have recommendations for books, games, websites for a four year-old who has a lot of curiosity about reading and spelling?</content><maincat>Parenting</maincat>
+<subject>How do satellites remain in orbit? Is there ever a risk that they will crash down to Earth?</subject><maincat>Science</maincat>
+<subject>How do you help a family member who refuses to get treatment for depression?</subject><content>I have a family member who suffers from depression, but refuses to admit it or seek treatment. How do I help him?</content><maincat>Health</maincat>
+<subject>How can I get Cuban cigars in America?</subject><maincat>Travel</maincat>
+<subject>How can I find ratings of digital cameras that I am interested in buying?</subject><content>I want to buy a ultracompact digital camera. How do I find out the pros and cons of each camera in the category to make a good decision?</content><maincat>Electronics</maincat>
+<subject>How do you set the clock on a Honda CBR?</subject><content>I have a 2001 Honda CBR for which the clock has NEVER been set correctly. Instructions are not in the maintenance manual, I've checked online and I've pushed the 2 buttons in every conceivable way with no success.</content><maincat>Transportation</maincat>
+<subject>How can we bring back Arrested Development?</subject><content>FOX is ruthless about the numbers. Does quality matter anymore?</content><maincat>Entertainment</maincat>
+<subject>How do I keep my dog from going crazy around the house?</subject><content>My dog is good most of the time but from time to time she steals food from the counter when we're home.  We try to put things away but is there any way to gently deter her from countersurfing?</content><maincat>Pets</maincat>
+<subject>How do I get to the top of the Sugarloaf in Rio?</subject><maincat>Travel</maincat>
+<subject>How does the Global Refund GST Scheme work when I go shopping in Singapore?</subject><content>And what's the difference between that and the Premier GST Refund Scheme?</content><maincat>Travel</maincat>
+<subject>How do you recommend I get from the Changi airport to my hotel in downtown Singapore?</subject><maincat>Travel</maincat>
+<subject>How do you recommend I get to the Jeitta Grotto from my hotel in Beirut?</subject><maincat>Travel</maincat>
+<subject>How does information theory shed light on the origin of human life, if at all?</subject><maincat>Science</maincat>
+<subject>how does divorce affects a child?</subject><content>How can one minimize the trauma on the child?</content><maincat>Relationships</maincat>
+<subject>How do I insulate my home to reduce cold and flight noise ?</subject><content>My home is getting very cold this winter, easily going down to 50 degrees. I   also hear flight noise though my home is not in the flight path. In general, noise insulation is poor in my home. I want to know what I need to do to diagnose the problem and solve it. &#xa;&#xa;If you have a recommendation for any good local business in san jose to solve these issues, that will be great too.</content><maincat>Home</maincat>
+<subject>How do I become a movie extra?</subject><maincat>Entertainment</maincat>
+<subject>How do I become Anime voice talent?</subject><content>I think I have what it takes to be a star!</content><maincat>Arts</maincat>
+<subject>How do I decide on a good magic set for children (about 8 years old)?</subject><content>Ideally, less than $50</content><maincat>Recreation</maincat>
+<subject>How to speech fluently in a public place?</subject><maincat>Culture</maincat>
+<subject>How can I get a table for 2 at 7:30 pm at Asia SF on Friday, December 9, 2005?</subject><maincat>Other</maincat>
+<subject>how can i find my love?</subject><maincat>Relationships</maincat>
+<subject>how to apply to Microsoft MDP Vietnam ?</subject><content>MDP is market development partner of Microsoft</content><maincat>Business</maincat>
+<subject>How can I play "Battlefield 2: Modern Combat" on PC?!?</subject><content>I know that "Battlefield 2: Modern Combat" released 4 PS2 and Xbox, but I hope that there is a way to play it on PC.</content><maincat>Recreation</maincat>
+<subject>How to get money for starting a small-scale business?</subject><content>I have some new ideas in my mind, but I don't have enough money to start a business, and I have no clue how to get the money to start it?</content><maincat>Business</maincat>
+<subject>How can we create superintelligent people?</subject><content>People that can understand a vast amount of knowledge.</content><maincat>Education</maincat>
+<subject>how to programming the web that allow semd sms to mobile?</subject><content>I want to programming the website that allow averyone semd sms to mobile phone.</content><maincat>Business</maincat>
+<subject>How do I clear all the address stuff showing up in the box that is filling the screen?</subject><content>The address box is filling my screen with all the old stuff that I have typed in, how do I clear it?</content><maincat>Business</maincat>
+<subject>How do i train my dog in agility?</subject><maincat>Pets</maincat>
+<subject>How can I copy songs from the ipod to other computers?</subject><content>I have various computers, more than three and when I plug my ipod to them Itunes says that the ipod is not linked to that itunes library and that if I done so, I will lose all the songs recorded in the ipod. This is the most frustrating thing, because I own the computers and I own the songs, I can not understand why this happens and even more, what do I have to do to fix it?</content><maincat>Electronics</maincat>
+<subject>how do i do transcendental meditation?</subject><maincat>Arts</maincat>
+<subject>How can I find a girlfriend ?</subject><content>someone to insist ,to come along with during my life.</content><maincat>Relationships</maincat>
+<subject>How to get rid of car sickness ?</subject><content>it's so annoying!</content><maincat>Health</maincat>
+<subject>how to get to Patani from Bangkok? Is it hard to get there?</subject><maincat>Travel</maincat>
+<subject>How do I get a $250,000 job by working 9 to 5, five days a week?</subject><maincat>Business</maincat>
+<subject>how to make hair stronger?</subject><maincat>Business</maincat>
+<subject>How do I get a girlfriend? (see details..)?</subject><content>I learn in a boys' school.. my friends are boys, and i do not go out with the girls that they know (for complicated reasons). what do i do to find somebody? go out.. and?</content><maincat>Relationships</maincat>
+<subject>How do you rip DVDs?</subject><content>What is the easiest and most effective procedure to copy a DVD to your hard drive for later viewing?  Are there legal issues in performing this kind of backup?</content><maincat>Entertainment</maincat>
+<subject>how can i earn $1 mio in 5 years? any good ideas?</subject><maincat>Business</maincat>
+<subject>How do I make one million dollars in 10 years?</subject><maincat>Business</maincat>
+<subject>How do I make a jailhouse tattoo?</subject><maincat>Arts</maincat>
+<subject>How can you increase the formation of receptor sites on the cells to improve diabetic control?</subject><maincat>Health</maincat>
+<subject>How can you tell if a guy is interested in you?</subject><content>It's hard to tell sometimes if a guy is interested in you for work reasons, or if they are attracted--how do you tell?</content><maincat>Relationships</maincat>
+<subject>How do I get a man to ask me out?</subject><content>How to encourage a guy to ask me to go out? Seems mystifying</content><maincat>Relationships</maincat>
+<subject>How do I talk to a 16-year old son who wants nothing to do with me?</subject><maincat>Parenting</maincat>
+<subject>How do I play online low stakes Texas Hold'em poker successfully?</subject><maincat>Recreation</maincat>
+<subject>How can I become a professional wrestler?</subject><maincat>Sports</maincat>
