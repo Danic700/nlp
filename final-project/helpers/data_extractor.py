@@ -2,6 +2,7 @@
 
 from nltk.tokenize import RegexpTokenizer
 
+
 class DataExtractor:
     def __init__(self, logger):
         self.logger = logger

@@ -1,13 +1,14 @@
 
 
-from gensim.models import Word2Vec
 from collections import defaultdict
-from nltk import word_tokenize
+
 import pandas as pd
+from nltk import word_tokenize
+
+from gensim.models import Word2Vec
 
 
 class MatrixExtractor:
-
         def vectorize_text(self, df, text_column):
                 vectorized_text = []
                 for sent in df[text_column]:
