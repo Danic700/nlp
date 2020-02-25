@@ -22,7 +22,7 @@ extracted_data = d_extractor.extract_data(data, text_columns)
 #df, word_freq, word_2_vec, vocabulary = m_extractor.extract_matrices(extracted_data, columns, text_columns[1])
 
 # KNN Classifier
-success, error = KNNClassifier(extracted_data[:500]).classify_all()
+success, error = KNNClassifier(extracted_data[:1000]).classify_all()
 
 print("Accuracy in %:")
 print(float(success) / (success + error) * 100.0)
