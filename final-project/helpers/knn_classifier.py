@@ -18,41 +18,27 @@ class KNNClassifier():
 		else:
 			return float(numerator) / denominator
 
-	def classify_all(self):
-		new_data = []
-		for doc in self.data:
+	def classify(self, doc):
+		max_dist = -1
+		max_cat = None
+
+		v1 = Counter(doc[0] + doc[1])
+
+		for j in range(len(self.train_data)):
+
+			v2 = self.train_data[j][0]
+			v2_cat = self.train_data[j][1]
+			cos = self._get_cosine(v1, v2)
+
+			if cos > max_dist:
+				max_dist = cos
+				max_cat = v2_cat
+
+		return max_cat
+
+	def __init__(self, train_data):
+		new_train_data = []
+		for doc in train_data:
 			# [word_vec, category]
-			new_data += [[Counter(doc[0] + doc[1]), doc[2]]]
-
-		success = 0
-		error = 0
-
-		for i in range(len(new_data)):
-
-			max_dist = -1
-			max_cat = None
-
-			v1_cat = new_data[i][1]
-			v1 = new_data[i][0]
-
-			for j in range(len(new_data)):
-				if i == j:
-					continue
-
-				v2 = new_data[j][0]
-				v2_cat = new_data[j][1]
-				cos = self._get_cosine(v1, v2)
-
-				if cos > max_dist:
-					max_dist = cos
-					max_cat = v2_cat
-
-			if max_cat == v1_cat:
-				success += 1
-			else:
-				error += 1
-
-		return success, error
-
-	def __init__(self, extracted_data):
-		self.data = extracted_data
+			new_train_data += [[Counter(doc[0] + doc[1]), doc[2]]]
+		self.train_data = new_train_data

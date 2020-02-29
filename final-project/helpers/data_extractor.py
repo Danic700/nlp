@@ -8,20 +8,18 @@ class DataExtractor:
 
 	def _extract_line(self, line):
 		import re
-		pattern = r'<subject>(.*)<\/subject>(<content>(.*)<\/content>)?<maincat>(.*)<\/maincat>'
+		pattern = r'<subject>(.*)<\/subject>(<content>(.*)<\/content>)?(<maincat>(.*)<\/maincat>)?'
 
 		m = re.match(pattern, line)
 		if m:
 			subject = m.group(1)
 			content = subject if m.group(3) is None else m.group(3)
-			category = m.group(4)
-			self.logger.debug('subject = ' + subject + ', content = ' + content +
-			                  ', category = ' + category)
+			category = None if m.group(5) is None else m.group(5)
 			return (subject, content, category)
 		else:
 			raise ValueError("Failed to extract line: " + str(line))
 
-	def extract_data(self, data, text_columns):
+	def extract_data(self, data):
 		extracted_data = []
 
 		data = self._remove_text_unwanted_words(data)

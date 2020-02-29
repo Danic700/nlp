@@ -8,24 +8,36 @@ from helpers import *
 logging.basicConfig(level='INFO')
 logger = logging.getLogger("Logger")
 
+
+def extract_data(d_extractor, path):
+	f = open(path, "r")
+	data = f.read()
+	extracted_data = d_extractor.extract_data(data)
+	return extracted_data
+
+
+def run_1nn(train_data, test_data):
+	knn_classifier = KNNClassifier(train_data)
+
+	for doc in test_data:
+		category = knn_classifier.classify(doc)
+		print(category)
+
+
 d_extractor = DataExtractor(logger)
 m_extractor = MatrixExtractor()
 
-f = open("data/train_data.txt", "r")
-data = f.read()
-logger.debug(data)
+train_data = extract_data(d_extractor, 'data/train_data_sample.txt')
+test_data = extract_data(d_extractor, 'data/test_data_sample.txt')
 
-columns = ['subject', 'content', 'category']
-text_columns = ['subject', 'content']
-extracted_data = d_extractor.extract_data(data, text_columns)
+print(train_data)
+print(test_data)
 
+run_1nn(train_data, test_data)
+
+#columns = ['subject', 'content', 'category']
+#text_columns = ['subject', 'content']
 #df, word_freq, word_2_vec, vocabulary = m_extractor.extract_matrices(extracted_data, columns, text_columns[1])
-
-# KNN Classifier
-success, error = KNNClassifier(extracted_data[:1000]).classify_all()
-
-print("Accuracy in %:")
-print(float(success) / (success + error) * 100.0)
 
 #print(df)
 # print('\n*****')
