@@ -16,12 +16,25 @@ def extract_data(d_extractor, path):
 	return extracted_data
 
 
+def output_categories(filename, categories):
+	with open('data/' + filename, 'w') as f:
+		for i in range(len(categories)):
+			category = categories[i]
+			f.write(category)
+
+			if i < len(categories) - 1:
+				f.write('\n')
+
+
 def run_1nn(train_data, test_data):
 	knn_classifier = KNNClassifier(train_data)
 
+	categories = []
 	for doc in test_data:
 		category = knn_classifier.classify(doc)
-		print(category)
+		categories.append(category)
+
+	output_categories('output1.txt', categories)
 
 
 d_extractor = DataExtractor(logger)
@@ -29,9 +42,6 @@ m_extractor = MatrixExtractor()
 
 train_data = extract_data(d_extractor, 'data/train_data_sample.txt')
 test_data = extract_data(d_extractor, 'data/test_data_sample.txt')
-
-print(train_data)
-print(test_data)
 
 run_1nn(train_data, test_data)
 
