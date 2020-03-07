@@ -30,7 +30,10 @@ def run_1nn(train_data, test_data):
 	knn_classifier = KNNClassifier(train_data)
 
 	categories = []
+	i = 0
 	for doc in test_data:
+		print(i)
+		i += 1
 		category = knn_classifier.classify(doc)
 		categories.append(category)
 
@@ -40,8 +43,8 @@ def run_1nn(train_data, test_data):
 d_extractor = DataExtractor(logger)
 m_extractor = MatrixExtractor()
 
-train_data = extract_data(d_extractor, 'data/train_data_sample.txt')
-test_data = extract_data(d_extractor, 'data/test_data_sample.txt')
+train_data = extract_data(d_extractor, 'data/train_data.txt')
+test_data = extract_data(d_extractor, 'data/test_data.txt')
 
 run_1nn(train_data, test_data)
 
