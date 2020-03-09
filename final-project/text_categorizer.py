@@ -31,15 +31,14 @@ def read_categories(filename):
 		return f.read().split('\n')
 
 
-def run_1nn(train_data, test_data):
+def run_1nn(train_data, test_data, exclude_i=False):
 	knn_classifier = KNNClassifier(train_data)
 
 	categories = []
-	i = 0
-	for doc in test_data:
+	for i in range(len(test_data)):
+		doc = test_data[i]
 		print(i)
-		i += 1
-		category = knn_classifier.classify(doc)
+		category = knn_classifier.classify(doc, i if exclude_i else None)
 		categories.append(category)
 
 	return categories
@@ -54,7 +53,7 @@ train_data = extract_data(d_extractor, 'data/train_data.txt')
 #run_1nn(train_data, test_data)
 #output_categories('output1.txt', categories)
 
-#categories = run_1nn(train_data, train_data)
+#categories = run_1nn(train_data, train_data, True)
 #output_categories('output1_on_train_data.txt', categories)
 
 class_categories = read_categories('output1_on_train_data.txt')

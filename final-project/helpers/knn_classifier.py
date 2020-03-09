@@ -18,13 +18,16 @@ class KNNClassifier():
 		else:
 			return float(numerator) / denominator
 
-	def classify(self, doc):
+	def classify(self, doc, exclude_i):
 		max_dist = -1
 		max_cat = None
 
 		v1 = Counter(doc[0] + doc[1])
 
 		for j in range(len(self.train_data)):
+
+			if exclude_i and exclude_i == j:
+				continue
 
 			v2 = self.train_data[j][0]
 			v2_cat = self.train_data[j][1]
@@ -38,7 +41,8 @@ class KNNClassifier():
 
 	def __init__(self, train_data):
 		new_train_data = []
-		for doc in train_data:
+		for i in range(len(train_data)):
+			doc = train_data[i]
 			# [word_vec, category]
 			new_train_data += [[Counter(doc[0] + doc[1]), doc[2]]]
 		self.train_data = new_train_data
