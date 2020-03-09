@@ -37,7 +37,7 @@ def run_1nn(train_data, test_data):
 		category = knn_classifier.classify(doc)
 		categories.append(category)
 
-	output_categories('output1.txt', categories)
+	return categories
 
 
 d_extractor = DataExtractor(logger)
@@ -46,7 +46,11 @@ m_extractor = MatrixExtractor()
 train_data = extract_data(d_extractor, 'data/train_data.txt')
 test_data = extract_data(d_extractor, 'data/test_data.txt')
 
-run_1nn(train_data, test_data)
+#run_1nn(train_data, test_data)
+#output_categories('output1.txt', categories)
+
+categories = run_1nn(train_data, train_data)
+output_categories('output1_on_train_data.txt', categories)
 
 #columns = ['subject', 'content', 'category']
 #text_columns = ['subject', 'content']
