@@ -26,6 +26,11 @@ def output_categories(filename, categories):
 				f.write('\n')
 
 
+def read_categories(filename):
+	with open('data/' + filename, 'r') as f:
+		return f.read().split('\n')
+
+
 def run_1nn(train_data, test_data):
 	knn_classifier = KNNClassifier(train_data)
 
@@ -44,13 +49,22 @@ d_extractor = DataExtractor(logger)
 m_extractor = MatrixExtractor()
 
 train_data = extract_data(d_extractor, 'data/train_data.txt')
-test_data = extract_data(d_extractor, 'data/test_data.txt')
+#test_data = extract_data(d_extractor, 'data/test_data.txt')
 
 #run_1nn(train_data, test_data)
 #output_categories('output1.txt', categories)
 
-categories = run_1nn(train_data, train_data)
-output_categories('output1_on_train_data.txt', categories)
+#categories = run_1nn(train_data, train_data)
+#output_categories('output1_on_train_data.txt', categories)
+
+class_categories = read_categories('output1_on_train_data.txt')
+total = len(class_categories)
+success = 0.0
+for i in range(total):
+	if class_categories[i] == train_data[i][2]:
+		success += 1
+
+print(success / total)
 
 #columns = ['subject', 'content', 'category']
 #text_columns = ['subject', 'content']
